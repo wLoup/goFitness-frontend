@@ -20,6 +20,9 @@
           <el-form-item prop="phone">
             <el-input type="text" placeholder="phone number" v-model="form.phone"></el-input>
           </el-form-item>
+          <el-form-item prop="sex">
+            <el-input type="text" placeholder="sex" v-model="form.sex"></el-input>
+          </el-form-item>
           <el-form-item prop="height">
             <el-input type="text" placeholder="your body height" v-model="form.height"></el-input>
           </el-form-item>
@@ -28,6 +31,9 @@
           </el-form-item>
           <el-form-item prop="weight">
             <el-input type="text" placeholder="your body weight" v-model="form.weight"></el-input>
+          </el-form-item>
+          <el-form-item prop="sport">
+            <el-input type="text" placeholder="your favoriate sports, e.g. HIIT, Zumba, Yoga, Boxing" v-model="form.sports"></el-input>
           </el-form-item>
           <!--<input type="text" v-model="form.username" placeholder="用户名" required="">-->
           <!--<input type="text" v-model="form.email" placeholder="邮箱" required="">-->
@@ -86,7 +92,7 @@
         if (!value) {
           return callback(new Error('Phone number cannot be blank'));
         } else {
-          const reg = /^1[3|4|5|7|8][0-9]\d{8}$/
+          const reg = /^\d{8}$/
           console.log(reg.test(value));
           if (reg.test(value)) {
             callback();
@@ -103,9 +109,12 @@
           email: "",
           password: "",
           phone: "",
+          sex: "",
           height: "",
           age: "",
-          weight: ""
+          weight: "",
+          sports:""
+
         },
         rules: {
           username: [{ required: true, message: 'Please key in your username', trigger: 'blur' },
@@ -116,6 +125,14 @@
           { max: 20, message: 'Max length is 20 characters', trigger: 'blur'  }],
           phone: [{ required: true, message: 'Please key in your phone number', trigger: 'blur' },
               {validator: checkPhone, trigger: 'blur'}],
+          sex: [{ required: true, message: 'Please key in your sex', trigger: 'blur' },
+          { max: 8, message: 'Max length is 8 characters', trigger: 'blur'  }],
+          height: [{ required: true, message: 'Please key in your height', trigger: 'blur' },
+          { max: 4, message: 'Max length is 4 characters', trigger: 'blur'  }],
+          age: [{ required: true, message: 'Please key in your age', trigger: 'blur' },
+          { max: 4, message: 'Max length is 4 characters', trigger: 'blur'  }],
+          weight: [{ required: true, message: 'Please key in your weight', trigger: 'blur' },
+          { max: 4, message: 'Max length is 4 characters', trigger: 'blur'  }],
         }
       }
     },

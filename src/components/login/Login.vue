@@ -1,6 +1,6 @@
 <template>
   <div class="rebody" id="bg">
-    <h1>Welcome to Fitness</h1>
+    <h1>Welcome to goFitness</h1>
     <div class="container w3layouts agileits">
 
       <div class="login w3layouts agileits">
@@ -29,22 +29,6 @@
             <p style="color: #e5e5e5" class="go_login" >No Account? <router-link :to="{name:'register'}">Click here to sign up</router-link></p>
           </form>
         </div>
-        <!--</div>-->
-      <!--  <div class="social-icons w3layouts agileits">
-          <p>- Other ways to log in -</p>
-          <ul>
-            <li class="qq"><a href="#">
-                <span class="icons w3layouts agileits"></span>
-                <span class="text w3layouts agileits">QQ</span></a></li>
-            <li class="weixin w3ls"><a href="#">
-                <span class="icons w3layouts"></span>
-                <span class="text w3layouts agileits">微信</span></a></li>
-            <li class="weibo aits"><a href="#">
-                <span class="icons agileits"></span>
-                <span class="text w3layouts agileits">微博</span></a></li>
-            <div class="clear"> </div>
-          </ul>
-        </div> -->
         <div class="clear"></div>
       </div>
 
@@ -65,28 +49,6 @@
   } from '@/api/user.js'
   export default {
     name: 'Login',
-    // props: {
-    //   usernameRules: {
-    //     type: Array,
-    //     default: () => {
-    //       return [{
-    //         required: true,
-    //         message: '账号不能为空',
-    //         trigger: 'blur'
-    //       }]
-    //     }
-    //   },
-    //   passwordRules: {
-    //     type: Array,
-    //     default: () => {
-    //       return [{
-    //         required: true,
-    //         message: '密码不能为空',
-    //         trigger: 'blur'
-    //       }]
-    //     }
-    //   }
-    // },
     data() {
       return {
         status_code: '',
@@ -102,14 +64,6 @@
         }
       }
     },
-    // computed: {
-    //   rules() {
-    //     return {
-    //       username: this.usernameRules,
-    //       password: this.passwordRules
-    //     }
-    //   }
-    // },
     methods: {
       loginHandler(formName,form) {
         // this.$refs[formName].validate((valid) => {
@@ -137,7 +91,7 @@
              //         re2: {exercise_name:x, exercise_length:x, description:x, video_link:x, image_url:x,category_id:x,}
              //     }
              // }}
-            console.log(form.username)
+            // console.log(form.username)
 
             window.sessionStorage.setItem("re0",JSON.stringify(data.data.recommend.re0))
             window.sessionStorage.setItem("re1",JSON.stringify(data.data.recommend.re1))
@@ -154,19 +108,27 @@
         login(form).then(
           res => {
             // localStorage.removeItem('token')
-            // const data = res.data
+            const data = res.data
             //  data => {message: xxxx , status_code: xxxx, data: {token: xxx }}}
-            this.status_code = res.data.status_code
-            window.sessionStorage.setItem("user",JSON.stringify(form.username))
+            // console.log(res)
 
+            // console.log(check)
+            window.sessionStorage.setItem("user",JSON.stringify(form.username))
+            // this.$router.push("/");
+            window.sessionStorage.setItem("check",JSON.stringify(data.status_code))
+            this.$router.push("/");
           },
         )
-        if(window.sessionStorage["user"]){
-            this.$router.push("/");
-        }
-        else {
-            alert('Error username or password!');
-        }
+        // console.log(login(form).status_code)
+        // const tp = JSON.parse(window.sessionStorage.getItem('check'))
+        // if(tp == 10000){
+        //     // console.log(tp)
+        //     this.$router.push("/");
+        // }
+        // else {
+        //     // console.log(tp.message)
+        //     alert('Error username or password!');
+        // }
 
 
         // this.$jsonp('http://127.0.0.1:5000/v1/api/recommend/', {"user_name":form.username})

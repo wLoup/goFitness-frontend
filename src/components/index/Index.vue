@@ -18,7 +18,7 @@
                           <div style="font-size:64px; color: silver; font-family: 'Times New Roman'; margin-top: 260px; margin-bottom:0px;">
                               Dear {{username}}, <br/>
                               Welcome to visit GoFitness!
-                              <el-button type="info" round style="font-size:48px; color: #e5e5e5; background-color: transparent;" @click="logout">Log Out</el-button>
+                              <!--<el-button type="info" round style="font-size:48px; color: #e5e5e5; background-color: transparent;" @click="logout">Log Out</el-button>-->
                           </div>
                           <div class="tt-mslide-title white text-animation" data-animation="zoomIn">
                             <h3>Maintain your body fitness</h3>

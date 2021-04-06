@@ -73,7 +73,9 @@
                   </li>
                   <li class="parent">
                     <router-link :to="{name:'login'}" exact class="aui-tabBar-item ">
-                    <span class="par">Log in</span>
+                    <!--<span class="par">{{getLogin()}}</span>-->
+                    <span class="par"><el-button type="info" style="font-size:20px; border-color: transparent;padding:2px; color: #e5e5e5; background-color: transparent;"
+                                                 @click="logout">{{getLogin()}}</el-button></span>
                     </router-link>
                   </li>
                 </ul>
@@ -94,7 +96,20 @@
 
 <script>
   export default {
-    name: 'Main'
+    name: 'Main',
+    methods:{
+        getLogin() {
+            var check = 'Log in'
+            if(window.sessionStorage.getItem("user")){
+                check =  'Log out';
+            }
+            return check
+        },
+        logout(){
+            window.sessionStorage.clear();//清除之前session存的user信息
+            this.$router.push("/login");//回到首页
+        }
+    }
   }
 </script>
 

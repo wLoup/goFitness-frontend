@@ -70,7 +70,7 @@
                 <div class="blog_withoutside">
                   <!--<h3 class="h3 blog-title">{{getRe("re1").exercise_name}}</h3>-->
                   <div class="blogInfo">
-                    <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re0").category}}</p><br/>
+                    <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re1").category}}</p><br/>
                     <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re1").exercise_length}}</p><br/>
                     <p><i class="fa fa-tag"></i> Video link: <a :href="v0">{{getRe("re1").video_link}}</a></p><br/>
                     <p><i class="fa fa-tag"></i> Description:  {{getRe("re1").description}}</p>
@@ -97,7 +97,7 @@
                 <div class="blog_withoutside">
                   <!--<h3 class="h3 blog-title">{{getRe("re1").exercise_name}}</h3>-->
                   <div class="blogInfo">
-                    <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re0").category}}</p><br/>
+                    <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re2").category}}</p><br/>
                     <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re2").exercise_length}}</p><br/>
                     <p><i class="fa fa-tag"></i> Video link: <a :href="v0">{{getRe("re2").video_link}}</a></p><br/>
                     <p><i class="fa fa-tag"></i> Description:  {{getRe("re2").description}}</p>
@@ -124,7 +124,7 @@
                 <div class="blog_withoutside">
                   <!--<h3 class="h3 blog-title">{{getRe("re1").exercise_name}}</h3>-->
                   <div class="blogInfo">
-                    <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re0").category}}</p><br/>
+                    <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re3").category}}</p><br/>
                     <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re3").exercise_length}}</p><br/>
                     <p><i class="fa fa-tag"></i> Video link: <a :href="v0">{{getRe("re3").video_link}}</a></p><br/>
                     <p><i class="fa fa-tag"></i> Description:  {{getRe("re3").description}}</p>
@@ -150,7 +150,7 @@
                 <div class="blog_withoutside">
                   <!--<h3 class="h3 blog-title">{{getRe("re2").exercise_name}}</h3>-->
                   <div class="blogInfo">
-                    <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re0").category}}</p><br/>
+                    <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re4").category}}</p><br/>
                     <p><i class="fa fa-tag"></i> Exercise length: {{getRe("re4").exercise_length}}</p><br/>
                     <p><i class="fa fa-tag"></i> Video link: <a :href="v0">{{getRe("re4").video_link}}</a></p><br/>
                     <p><i class="fa fa-tag"></i> Description:  {{getRe("re4").description}}</p>
