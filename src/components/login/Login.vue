@@ -114,13 +114,25 @@
 
             // console.log(check)
             window.sessionStorage.setItem("user",JSON.stringify(form.username))
-            // this.$router.push("/");
-            window.sessionStorage.setItem("check",JSON.stringify(data.status_code))
             this.$router.push("/");
+            window.sessionStorage.setItem("check",JSON.stringify(data.status_code))
+
+            // const tp = JSON.parse(window.sessionStorage.getItem('check'))
+            // if(tp == 10000){
+            //     // console.log(tp)
+            //     this.$router.push("/");
+            // }
+            // else {
+            //     // console.log(tp.message)
+            //     alert('Error username or password!');
+            // }
+            // alert('successful login!');
+            // this.$router.push("/");
+
           },
         )
         // console.log(login(form).status_code)
-        // const tp = JSON.parse(window.sessionStorage.getItem('check'))
+        //
         // if(tp == 10000){
         //     // console.log(tp)
         //     this.$router.push("/");

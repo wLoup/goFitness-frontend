@@ -158,15 +158,15 @@
                   <!--<div class="blog-content"></div>-->
                 </div>
               </div>
-              <div class="pagiNexts">
-                <div class="paginationWrapper">
-                  <div class="nubmerPagination">
-                    <a class="numberPagi activePagi" href="#">1</a>
-                    <a class="numberPagi" href="#">2</a>
-                  </div>
-                  <a class="pagiNext" href="#"><i class="fa fa-angle-right"></i></a>
-                </div>
-              </div>
+              <!--<div class="pagiNexts">-->
+                <!--<div class="paginationWrapper">-->
+                  <!--<div class="nubmerPagination">-->
+                    <!--<a class="numberPagi activePagi" href="#">1</a>-->
+                    <!--<a class="numberPagi" href="#">2</a>-->
+                  <!--</div>-->
+                  <!--<a class="pagiNext" href="#"><i class="fa fa-angle-right"></i></a>-->
+                <!--</div>-->
+              <!--</div>-->
             </div>
           </div>
          </div>

@@ -21,7 +21,7 @@
             <el-input type="text" placeholder="phone number" v-model="form.phone"></el-input>
           </el-form-item>
           <el-form-item prop="sex">
-            <el-input type="text" placeholder="sex" v-model="form.sex"></el-input>
+            <el-input type="text" placeholder="sex(male/female)" v-model="form.sex"></el-input>
           </el-form-item>
           <el-form-item prop="height">
             <el-input type="text" placeholder="your body height" v-model="form.height"></el-input>
@@ -33,7 +33,7 @@
             <el-input type="text" placeholder="your body weight" v-model="form.weight"></el-input>
           </el-form-item>
           <el-form-item prop="sport">
-            <el-input type="text" placeholder="your favoriate sports, e.g. HIIT, Zumba, Yoga, Boxing" v-model="form.sports"></el-input>
+            <el-input type="text" placeholder="preference(HIIT/Zumba/Yoga/Boxing)" v-model="form.sports"></el-input>
           </el-form-item>
           <!--<input type="text" v-model="form.username" placeholder="用户名" required="">-->
           <!--<input type="text" v-model="form.email" placeholder="邮箱" required="">-->
