@@ -4,6 +4,9 @@ const webpack = require("webpack");
 
 module.exports = {
     configureWebpack: {
+        devServer: {
+                       disableHostCheck: true,
+                    },
         plugins: [
           new webpack.ProvidePlugin({
             // 将 $ 变成全局变量
